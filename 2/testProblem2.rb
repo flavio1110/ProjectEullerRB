@@ -23,6 +23,6 @@ class SumOfMultipleOf3or5below10is23 < Test::Unit::TestCase
   end
 
   def test_sum_of_even_fibonnaci_number_under_4000000_is_4613732
-    assert_equal(4613732, ProjectEuller2.new.getSumOfFibonnaciNumbersBelow4000())
+    assert_equal(4613732, ProjectEuller2.new.get_sum_of_fibonnaci_numbers_below_4000())
   end
 end

@@ -11,20 +11,18 @@ class ProjectEuller2
     number <= 2 ? number : fib(number - 1) + fib(number - 2)
   end
 
-  def getSumOfFibonnaciNumbersBelow4000()
+  def get_sum_of_fibonnaci_numbers_below_4000()
     sum = 0
     index = 1
+
+    #I could use a for i < fib(i) < 4000000 but i prefer call fib to each index only once
     while true do
       fibOf = fib(index)
-       if fibOf < 4000000
-         sum = sum + fibOf if fibOf % 2 == 0
-       else
-         break
-       end
-       index = index + 1
+      break if fibOf >= 4000000
+
+      sum = sum + fibOf if fibOf % 2 == 0
+      index = index + 1
     end
     sum
   end
 end
-
-#puts ProjectEuller2.new.getSumOfFibonnaciNumbersBelow4000()
